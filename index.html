@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        فروشگاه اینترنتی دیجی کالا
+    </title>
+    <script src="jquery-3.3.1.min.js">
+
+    </script>
+    <link rel="stylesheet" href="css/flipTimer.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
+</head>
+<body style="margin: 0; background: #eee;">
+
+
+<style>
+    #main {
+        width: 1440px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        position: relative;
+    }
+
+    @font-face {
+        font-family: "BYekan";
+        src: url("fonts/BYekan.ttf") format("truetype");
+    }
+
+    div, span, a, li, ul {
+        text-align: right;
+        direction: rtl;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .BYekan {
+        font-family: "B Yekan"
+    }
+
+    .fontsm {
+        font-size: 10pt
+    }
+
+    .fontmd {
+        font-size: 12pt
+    }
+
+    .fontlg {
+        font-size:
+    }
+
+    .fontcolor {
+        color: rgba(16, 16, 17, 0.89)
+    }
+
+    #header {
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    #header_right {
+        width: 720px;
+        float: right;
+        height: 100px;
+    }
+
+    #header_right_top {
+        height: 40px
+    }
+
+</style>
+<header style="background:white">
+    <div id="header">
+        <div id="header_right">
+            <div id="header_right_top">
+                <span style="width:20px; height: 20px; float: right; background: url(images/locked.png);display: block;"></span>
+                <a class="BYekan fontsm" href="/login" style="float: right; margin-right: 10px; color: #555555;">
+                    فروشگاه اینترنتی دیجی کالاوارد شوید
+                </a>
+                <span style="width: 20px;height: 20px;float: right; background: url(images/upload-arrow-with-bar.png ); display: block; float: right; margin-right: 20px; "></span>
+                <a class="fontsm BYekan" href="/register" style="float: right; margin-right: 10px; color: #555555;">
+                    ثبت نام کنید
+                </a>
+            </div>
+
+
+            <div id="header_right_bottom" style="height: 50px">
+                <div id="basket_top" style=" width: 190px; height: 38px;  float: right;">
+                    <div id="basket_top_right"
+                         style=" width:54px;height: 100%;float: right; background: rgba(241,40,42,0.64)  url(images/shopping-cart.png) no-repeat; background-position:center; ">
+
+                    </div>
+                    <div class="BYekan" id="basket_top_left"
+                         style=" width:136px; float: right;height: 100%; background: #cccccc no-repeat; background-position:center; ">
+                        <span class="BYekan fontsm"
+                              style="color: white; line-height: 40px; position: relative; right: 25px;">  سبد خرید </span>
+                        <span style="width: 25px; height: 25px; background: #ffffff; text-align: center; display:block; float: left; margin-top: 7px; line-height: 25px; border-radius: 60%; position: relative; left: 15px; color: #555555; ">
+                            0
+                        </span>
+                    </div>
+                </div>
+                <div id="search_top" style=" width: 500px; height: 40px; float: right; position: relative;">
+                    <input type="text"
+                           style="width: 450px; height: 35px; float: right; margin-top: 1px; margin-right: 38px; border: 1px solid #eee; padding-right: 10px; color: black; font-family:BYekan; font-size: 12pt; border-radius: 5px;"
+                           placeholder="نام کالا ، برند و یا دسته مورد نظر خود را جستجو کنید ...">
+                    <span style="width: 40px; height: 39px; display: block; position: absolute; left:-1px; top: 1px; background: rgba(255,40,42,0.64) url(images/search.png)  no-repeat;background-position: 6px 6px;border-radius: 5px 0px 0 5px;"></span>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="header_left" style="float: left ">
+            <img src="Capture.JPG" height="43" width="130">
+        </div>
+    </div>
+</header>
+<style>
+    nav {
+        box-shadow: 1px 3px 4px #cccccc;
+        -webkit_box-shadow: 1px 3px 4px #cccccc;
+        -moz-box-shadow: 1px 3px 4px #cccccc;
+        z-index: 2;
+        position: relative;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #menu-top > ul > li {
+        float: right;
+        height: 40px;
+    }
+
+    #menu-top > ul > li > a {
+        padding: 0px 10px;
+        height: 40px;
+        display: block;
+        line-height: 36px;
+        font-size: 11pt;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu_down_icon {
+        background: url("images/downwards-arrow-key copy.png") no-repeat;
+        display: inline-block;
+        float: left;
+        height: 11px;
+        margin-right: 9px;
+        margin-top: 15px;
+        width: 11px;
+    }
+
+    #menu-top > ul > li > ul > li {
+        float: right;
+    }
+
+    #menu-top > ul > li > ul > li > a {
+        padding: 12px 20px;
+        display: block;
+    }
+
+    #menu-top > ul > li > ul {
+        position: absolute;
+        right: 118px;
+
+        background-color: #fff;
+        width: 1200px;
+        box-shadow: 0px 2px 3px #6d6e71;
+        padding-right: 0;
+        display: none;
+    }
+
+    #menu-top > ul {
+        padding-right: 0
+    }
+
+    .top_menu3_col {
+        width: 299px;
+        height: 100%;
+        float: right;
+        border-left: 1px solid #eeeeee;
+    }
+
+    .top_menu3_col_ul {
+        padding-right: 20px;
+    }
+
+    .top_menu3_col_ul > li {
+        padding-right: 18px;
+        padding-top: 10px;
+    }
+
+    .top_menu3_col_ul > li:first-child {
+
+        color: #8ec0b7;
+        padding-top: 12px;
+    }
+
+    .top_menu3_col img {
+        width = 300px height = 250px
+        position: absolute;
+        left: 0px;
+        bottom: -3px;
+    }
+
+    .submenu3 {
+        display: none;
+    }
+
+
+    .active-menu > a {
+        color: #ff5356;
+    }
+
+    #menu-top a {
+        cursor: pointer;
+        position: relative;
+    }
+
+    #nav {
+        width: 100%;
+        height: 40px;
+        background: #5c5e5f;
+        border-top: 1px solid #e6ebef;
+        color: white;
+
+
+    }
+
+    #menu-top {
+        width: 1200px;
+        height: 40px;
+        margin: auto;
+    }
+
+    .submenu3 {
+        width: 1200px;
+        height: 300px;
+        background: #ffffff;
+        border-top: 1px solid #eeeeee;
+        position: absolute;
+    }
+</style>
+<nav id="nav">
+    <div id="menu-top">
+        <ul class="BYekan">
+            <li data-timer="1">
+                <a class="BYekan">
+                    کالای دیجیتال
+
+                </a>
+                <ul class="fontcolor">
+                    <li data-timer="2">
+                        <a class="BYekan fontsm">
+                            موبایل
+                        </a>
+                        <div class="submenu3">
+                            <div class="top_menu3_col">
+                                <ul class="BYekan fontsm top_menu3_col_ul">
+                                    <li>
+                                        <a>
+                                            گوشی موبایل
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            apple
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            samsung
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col">
+                                <img src="images/1636.png"
+                                     style="width: 1200px; height: 300px; background: #ffffff; border-top: 1px solid #eeeeee; position: absolute; right: 0px;">
+                            </div>
+
+                        </div>
+
+                    </li>
+                    <li data-timer="3">
+                        <a class="BYekan fontsm">
+                            لپ تاپ
+                        </a>
+                        <div id=class="submenu3"
+                             style="width: 1200px; height: 300px; background: #ffffff; border-top: 1px solid #eeeeee; position: absolute; right: 0px;">
+                            <div class="top_menu3_col">
+                                <ul class="BYekan fontsm top_menu3_col_ul">
+                                    <li>
+                                        <a>
+                                            لپ تاپ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            asus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            sony
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col">
+                                <img src="images/1636.png" width="300px" height="250px"
+                                     style="position: absolute; left: 0px; bottom: -3px;">
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li data-timer="4">
+                        <a class="BYekan fontsm">
+                            تبلت و کتابخوان
+                        </a>
+                        <div class="submenu3"
+                             style="width: 1200px; height: 300px; background: #ffffff; border-top: 1px solid #eeeeee; position: absolute; right: 0px;">
+                            <div class="top_menu3_col">
+                                <ul class="BYekan fontsm top_menu3_col_ul">
+                                    <li>
+                                        <a>
+                                            تبلت
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            apple
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            samsung
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col">
+                                <img src="images/1636.png" width="300px" height="250px"
+                                     style="position: absolute; left: 0px; bottom: -3px;">
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li data-timer="5">
+                <a class="BYekan">
+                    لوازم خانگی
+
+                </a>
+                <ul class="fontcolor">
+                    <li data-timer="6">
+                        <a>
+                            صوتی و تصویری
+                        </a>
+                        <div class="submenu3"
+                             style="width: 1200px; height: 300px; background: #ffffff; border-top: 1px solid #eeeeee; position: absolute;">
+                            <div class="top_menu3_col">
+                                <ul class="BYekan fontsm top_menu3_col_ul">
+                                    <li>
+                                        <a>
+                                            تلوزیون
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            ۳۲ اینج
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            ۴۲اینج
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col">
+                                <img src="images/soti.png" width="300px" height="250px"
+                                     style="position: absolute; left: 0px; bottom: -3px;">
+                            </div>
+
+                        </div>
+
+                    </li>
+                    <li data-timer="7">
+                        <a>
+                            لوازم خانگی برقی
+
+                        </a>
+                        <div class="submenu3"
+                             style="width: 1200px; height: 300px; background: #ffffff; border-top: 1px solid #eeeeee; position: absolute; right: 0;">
+                            <div class="top_menu3_col">
+                                <ul class="BYekan fontsm top_menu3_col_ul">
+                                    <li>
+                                        <a>
+                                            یخجال فریزر
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            LG
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            samsung
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col"></div>
+                            <div class="top_menu3_col">
+                                <img src="images/soti.png" width="300px" height="250px"
+                                     style="position: absolute; left: 0px; bottom: -3px;">
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="main">
+
+    <style>
+        .sidebar_img {
+            margin-top: 9px;
+            margin-right: 10px;
+            border-radius: 13px;
+            box-shadow: -3px 2px 11px gray;
+            display: block;
+            margin-bottom: 21px;
+            overflow: hidden;
+        }
+
+        #sidebar-right {
+            width: 269px;
+            height: 837px;
+            float: right;
+            overflow: hidden;
+        }
+
+        #slider {
+            width: 1126px;
+            height: 332px;
+            margin: auto;
+            margin-left: 45px;
+            margin-top: 10px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        #slider a {
+            display: none;
+
+        }
+
+        #slider img {
+            width: 1125px;
+            height: 332px;
+            overflow: hidden;
+
+        }
+
+
+        .banner-bottom-slider {
+
+            width: 897px;
+            height: 461px;
+            float: right;
+
+            margin-top: 13px;
+            border-radius: 0 8px 8px 0px;
+            position: relative;
+            right: -4px;
+            background: white;
+        }
+
+        #banner-bottom-left-slider {
+            width: 214px;
+            height: 480px;
+            float: left;
+            position: relative;
+            left: 20px;
+        }
+
+        #discount-bar {
+            height: 414px;
+            width: 250px;
+            background: rgba(240, 246, 250, .9);
+            margin-top: 13px;
+            border-radius: 8px 0 0 8px;
+            overflow: hidden;
+        }
+
+        #discount-bottom {
+            height: 47px;
+            width: 250px;
+            background: #00bfd6 url("images/left-arrow.png") 215px 13px no-repeat;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 0 3px;
+            overflow: hidden;
+
+
+        }
+
+        #discount-bottom a {
+            line-height: 50px;
+            padding-right: 25px;
+            position: relative;
+        }
+
+
+        #discount-bottom-shadow {
+
+            height: 75px;
+            width: 95px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.25);
+            float: right;
+            position: absolute;
+            top: -32px;
+            right: -73px;
+            border-radius: 113%;
+            transition: all 650ms ease-in-out;
+        }
+
+
+        #next-icon {
+            width: 26px;
+            height: 29px;
+            display: block;
+            position: absolute;
+            top: 167px;
+            right: 20px;
+            background: url("images/next.png");
+            cursor: pointer;
+            z-index: 2;
+            transition: all 300ms;
+        }
+
+        #next-icon:hover {
+            right: 10px;
+
+        }
+
+        #prev-icon {
+            width: 26px;
+            height: 29px;
+            display: block;
+            position: absolute;
+            top: 167px;
+            left: 20px;
+            background: url("images/back.png");
+            cursor: pointer;
+            z-index: 2;
+            transition: all 300ms;
+        }
+
+        #prev-icon:hover {
+            left: 10px;
+
+        }
+
+        .active {
+
+            background-color: #34b8c9 !important;
+            box-shadow: 0 0 3px #34b8c9;
+        }
+
+        #slider-navigator li {
+
+            cursor: pointer;
+            display: block;
+            height: 10px;
+            width: 10px;
+            position: relative;
+            bottom: -302px;
+            right: -570px;
+            margin: auto;
+            background-color: white;
+            border-radius: 50%;
+            float: left;
+            margin-right: 13px;
+            z-index: 2;
+        }
+
+        #slider-navigator li:hover {
+            box-shadow: 0 0 5px #34b8c9;
+            height: 12px;
+            width: 12px;
+        }
+
+        #discount-bar ul li {
+            height: 41px;
+            width: 100%;
+            line-height: 47px;
+            margin-right: 0px;
+            color: #131415b3;
+            font-size: 12pt !important;
+            padding-right: 10px;
+            cursor: pointer;
+
+        }
+
+        #slider-img {
+            height: 100%;
+            width: 358px;
+            float: right;
+        }
+
+        .slider-content {
+            height: 100%;
+            width: 50%;
+            float: left;
+
+
+        }
+
+        .old-price {
+            width: 97px;
+            height: 20px;
+            margin-top: 100px;
+            margin-right: 84px;
+            font-size: 11pt !important;
+
+
+        }
+
+        .old-price::after {
+            width: 100%;
+            content: " ";
+            top: -7px;
+            right: -4px;
+            border-top: 2px solid #0009;
+            display: block;
+            transform: rotate(-13deg);
+            position: relative;
+        }
+
+
+        .slider2-img {
+            height: 80%;
+            width: 50%;
+            float: right;
+
+        }
+
+        .top-image {
+            background: rgba(249, 63, 73, 0.91);
+            height: 54px;
+            width: 276px;
+            margin-right: 68px;
+            border-radius: 0 0 23px 23px;
+            color: white;
+            text-align: center;
+            line-height: 55px;
+            font-size: 16pt;
+        }
+
+        .new-price {
+            width: 143px;
+            height: 20px;
+            margin-top: 33px;
+            margin-right: 57px;
+            font-size: 17pt;
+            color: rgba(249, 63, 73, 0.91);
+        }
+
+        .off {
+            width: 120px;
+            height: 45px;
+            background-color: rgba(249, 63, 73, 0.91);
+            position: absolute;
+            top: 146px;
+            left: 98px;
+            border-radius: 59px;
+            color: white;
+            text-align: center;
+            line-height: 42px;
+        }
+
+        .explain {
+            margin-right: 60px;
+            font-size: 15pt;
+        }
+
+        .explain ul li {
+            font-size: 10pt;
+            margin-top: 25px;
+
+        }
+
+        .explain ul li::before {
+            content: " ";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(81, 79, 81, 0.62);
+            margin-top: 3px;
+            float: right;
+            margin-left: 10px;
+
+        }
+
+
+        .clock {
+            right: -210px;
+            position: relative;
+            direction: ltr !important;
+            text-align: left !important;
+            transform: scale(0.45);
+            width: 680px;
+            bottom: -60px;
+        }
+
+        .clock * {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        .banner-finished {
+            height: 48px;
+            width: 333px;
+            border-radius: 5px 5px 5px 5px;
+            color: #999999;
+            font-size: 27pt;
+            border: 2px solid rgba(43, 41, 42, 0.41);
+            top: 33px;
+            right: 471px;
+            display: block;
+            position: absolute;
+            box-shadow: 0 1px 20px rgba(43, 41, 42, 0.41);
+            text-align: center;
+            line-height: 46px;
+            display: none;
+        }
+
+        .slider2 {
+            width: 1127px;
+            height: 476px;
+            position: absolute;
+            top: 343px;
+            left: 45px;
+            overflow: hidden;
+            border-radius: 8px;
+
+
+        }
+
+        .active2 {
+            background-color: rgba(249, 63, 73, 0.91) !important;
+            color: white !important;
+        }
+
+        #div-picture {
+            width: 1400px;
+            height: 267px;
+            position: absolute;
+            top: 838px;
+            left: 28px;
+
+        }
+
+        #div-picture ul li a img {
+            float: left;
+            display: block;
+            width: 330px;
+            height: 234px;
+            margin-left: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px gray;
+        }
+
+
+    </style>
+
+    <div id="slider">
+        <div id="slider-img">
+            <span id="next-icon"></span>
+            <span id="prev-icon"></span>
+
+            <a class="item">
+                <img src=" images/slider1.png">
+            </a>
+            <a class="item">
+                <img src=" images/slider2.png">
+            </a>
+            <a class="item">
+                <img src="images/slider3.png">
+
+            </a>
+            <a class="item">
+                <img src="images/slider4.png">
+            </a>
+        </div>
+
+        <div id="slider-navigator">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="sidebar-right">
+        <ul>
+            <li>
+                <a>
+                    <img src="images/sidebar1.png" class="sidebar_img" ">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/sidebar2.png " class="sidebar_img">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slider2">
+        <div id="banner-bottom-left-slider">
+            <div id="discount-bar">
+                <ul class="BYekan fontsm">
+                    <li> سفره یکبار مصرف</li>
+                    <li> کرم مرطوب کننده</li>
+                    <li> پرینتر چندکاره</li>
+                    <li> کاپشن زنانه</li>
+                    <li> سه تار</li>
+                    <li> مایع لباسشویی</li>
+                    <li> شارژر فندکی</li>
+                    <li> میز و صندلی سفری</li>
+                    <li> تلبت</li>
+                    <li> ویفر شکلاتی</li>
+
+
+                </ul>
+
+            </div>
+            <div id="discount-bottom" class="BYekan">
+                <a>
+                    <div id="discount-bottom-shadow">
+
+                    </div>
+                    مشاهده همه شگفت انگیزها
+                </a>
+            </div>
+
+        </div>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom1.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۱۹.۵۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۹.۹۰۰ تومان </p>
+                    <div class="off BYekan">٪۴۹ تخفیف</div>
+                    <div class="explain BYekan">
+                        سفره یکبار مصرف کاورلوکس
+                        <ul>
+                            <li>
+                                رول ۲۰ متری
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom2.jpg" style="height: 87%; margin-right: 44px">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۱۴.۸۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۷.۵۰۰ تومان </p>
+                    <div class="off BYekan">٪۴۹ تخفیف</div>
+                    <div class="explain BYekan">
+                        کرم مرطوب کننده سیگل
+                        <ul>
+                            <li>
+                                حجم ۲۰۰ میلی لیتر
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom3.jpg" style="height: 87%; margin-right: 44px">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۳۲۹۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۲۹۹۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۹ تخفیف</div>
+                    <div class="explain BYekan">
+                        پرینتز چندکاره جوهرافشان
+                        <ul>
+                            <li>
+                                نوع چاپ: رنگی
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom4.jpg" style="height: 87%; margin-right: 44px">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۱۵۰۰۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۵۴۹۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۶۳ تخفیف</div>
+                    <div class="explain BYekan">
+                        کاپشن زنانه بیلسی
+                        <ul>
+                            <li>
+                                جنس: نایلون
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom5.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۲۳۵۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۱۸۹۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۲۰ تخفیف</div>
+                    <div class="explain BYekan">
+                        سه تار عزیزی ویژه
+                        <ul>
+                            <li>
+                                جنس دسته: چوب گردو
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom6.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۳۵۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۲۹۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۱۷ تخفیف</div>
+                    <div class="explain BYekan">
+                        مایع لباس شویی هوم کر
+                        <ul>
+                            <li>
+                                نوع: مایع لباس شویی
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom7.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۱۲۹۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۵۹۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۵۴ تخفیف</div>
+                    <div class="explain BYekan">
+                        شارژر فندکی پرومیت
+                        <ul>
+                            <li>
+                                تعداد درگاه خروجی : ۲
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom8.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۲۵۹۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۱۷۴۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۳۲ تخفیف</div>
+                    <div class="explain BYekan">
+                        میز و صندلی سفری
+                        <ul>
+                            <li>
+                                تاشو و تنظیم شو
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom10.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۷۹۸۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۶۹۸۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۱۳ تخفیف</div>
+                    <div class="explain BYekan">
+                        تبلت ایکس ویژن
+                        <ul>
+                            <li>
+                                قابلیت مکالمه: دارد
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <a class="item2">
+            <div class="banner-bottom-slider">
+
+                <div class="slider2-img">
+                    <div class="top-image BYekan">پیشنهاد شگفت انگیز</div>
+                    <img src="images/slider-bottom9.jpg" style="height: 100%">
+                </div>
+                <div class="slider-content">
+                    <div class="old-price BYekan fontmd"> ۴۵۰۰۰ تومان</div>
+                    <p class="new-price BYekan"> ۳۱۰۰۰ تومان </p>
+                    <div class="off BYekan">٪۳۰ تخفیف</div>
+                    <div class="explain BYekan">
+                        ویفر شکلاتی کوپا
+                        <ul>
+                            <li>
+                                بسته ۳۰ عددی
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clock">
+                        <!--<div class="days"></div>-->
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+                    <div class="banner-finished BYekan">
+                        تمام شد!
+                    </div>
+                </div>
+
+            </div>
+        </a>
+
+    </div>
+    <div id="div-picture">
+        <ul>
+            <li>
+                <a>
+                    <img src="images/div1.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/div2.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/div3.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/div4.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <style>
+        .scroll-slider {
+            height: 421px;
+            width: 1114px;
+            float: left;
+            position: absolute;
+            top: 1089px;
+            right: 19px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .scroll-title {
+            width: 90%;
+            height: 13%;
+            padding-right: 15px;
+            font-size: 15pt;
+            border-bottom: 1px solid #c1b1b1;
+            margin-right: 40px;
+            color: #555555;
+            font-weight: lighter;
+            line-height: 40px;
+
+
+        }
+
+        #suggestion {
+            height: 421px;
+            width: 248px;
+            float: left;
+            background-color: white;
+            position: absolute;
+            top: 1089px;
+            left: 49px;
+            border-radius: 8px;
+
+
+        }
+
+        #suggestion-title {
+            width: 90%;
+            height: 10%;
+            font-size: 12pt;
+            padding-right: 15px;
+            color: #999999;
+            line-height: 34px;
+            font-weight: lighter;
+        }
+
+        .scroll-slider-content {
+            width: 100%;
+            height: 330px;
+            overflow: hidden;
+        }
+
+        .scroll-slider-main {
+            height: 328px;
+            width: 91%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .scroll-slider-btn-style1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 3px gray;
+            position: absolute;
+            top: 55px;
+            bottom: 0;
+            margin: auto;
+            transition: all 150ms linear;
+        }
+
+        .scroll-slider-btn-style1:hover {
+            box-shadow: 0 0 5px gray;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .style1-right {
+            right: 30px;
+            background: #9999991a url(images/slices.png) -832px -675px;
+        }
+
+        .style1-right:hover {
+            right: 25px;
+        }
+
+        .style1-left {
+            left: 30px;
+            background: #9999991a url(images/slices.png) -798px -675px;
+        }
+
+        .style1-left:hover {
+            left: 25px;
+        }
+
+        .scroll-slider-btn-style2 {
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 0 2px #80808080;
+            position: absolute;
+            top: 55px;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+            transition: all 150ms linear;
+
+
+        }
+
+        .style2-right {
+            border: .5pt solid #80808080;
+            border-right: 0;
+            right: 0;
+            border-radius: 5px 0 0 5px;
+            background: #9999991a url(images/slices.png) -832px -676px;
+
+
+        }
+
+        .style2-right:hover {
+            right: -5px;
+        }
+
+        .style2-left {
+            border: .5pt solid #80808080;
+            border-left: 0;
+            left: 0;
+            border-radius: 0 5px 5px 0;
+            background: #9999991a url(images/slices.png) -796px -676px;
+
+        }
+
+        .style2-left:hover {
+            left: -5px;
+        }
+
+        .scroll-slider-main ul {
+            padding: 0;
+            height: 100%;
+            width: 2040px;
+            float: left;
+
+        }
+
+        .scroll-slider-main ul li {
+            height: 100%;
+            width: 255px;
+            float: left;
+        }
+
+        .scroll-slider-main ul li a {
+            width: 100%;
+            display: block;
+            height: 100%;
+            text-align: center;
+        }
+
+        .scroll-slider-main ul li a img {
+            width: 87%;
+            height: 60%;
+
+        }
+
+        .scroll-name {
+            margin-right: 82px;
+            margin-top: 19px;
+            color: #666666;
+        }
+
+        .scroll-price {
+            margin-right: 17px;
+            margin-top: 50px;
+            display: inline-block;
+            color: rgba(249, 63, 73, 0.91);
+            font-size: 15pt;
+        }
+        .scroll-slider2{
+            height: 421px;
+            width: 1373px;
+            float: left;
+            position: absolute;
+            right: 19px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden
+
+        }
+        .scroll-title2{
+            width: 94%;
+            height: 13%;
+            padding-right: 8px;
+            font-size: 15pt;
+            border-bottom: 1px solid #c1b1b1;
+            margin-right: 40px;
+            color: #555555;
+            font-weight: lighter;
+            line-height: 40px;
+
+        }
+
+    </style>
+    <div class="scroll-slider BYekan">
+        <h3 class="scroll-title BYekan">
+            کالای دیجیتال
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider1.jpg">
+                            <div class="scroll-name">
+                                هدفون بی سیم
+                            </div>
+                            <span class="scroll-price">
+                                ۶۸۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider2.jpg">
+                            <div class="scroll-name">
+                                هارد دیسک اکسترنال
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۹۰۰۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider3.jpg">
+                            <div class="scroll-name">
+                                گوشی موبایل الفون
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider4.jpg">
+                            <div class="scroll-name">
+                                هندزفری بلوتوث
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider5.jpg">
+                            <div class="scroll-name">
+                                 شارژر همراه
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider6.jpg">
+                            <div class="scroll-name">
+                                کارت حافظه
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider7.jpg">
+                            <div class="scroll-name">
+                                 فلش مموری
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۳۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider8.jpg">
+                            <div class="scroll-name">
+                                دوربین عکاسی چاپ
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۷۴۰۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn" onclick="sliderscroll('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn" onclick="sliderscroll('left',this);"></div>
+
+
+        </div>
+    </div>
+
+
+    <div id="suggestion">
+        <h3 id="suggestion-title" class="BYekan">
+            پیشنهادهای لحظه ای برای شما
+        </h3>
+    </div>
+    <div class="scroll-slider2 BYekan" style="top: 1520px;">
+        <h3 class="scroll-title2 BYekan">
+            مواد پروتيینی
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+
+
+    <style>
+        #div-btnn{
+           width: 1413px;
+            position: absolute;
+            height:296px;
+            margin-top: 1981px;
+            padding-right: 0px;
+            padding-left: 10px;
+            margin-right: 15px;
+        }
+        #div-btnn ul{
+            padding-left: 36px;
+        }
+        #div-btnn ul li{
+            float: left;
+            width: 327px;
+            margin-right: 17px;
+            
+        }
+        #div-btnn img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px gray;
+
+        }
+        #scroll_btnn{
+            width:1409px;
+            height:297px;
+            position: absolute;
+           top: 3149px;
+
+        }
+        #scroll_btnn li{
+            float: left;
+            height: 100%;
+            width: 675px;
+            padding-left: 19px;
+
+
+        }
+        #scroll_btnn img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        #banner-btm{
+            width: 1373px;
+            height: 228px;
+            position: absolute;
+            top: 4321px;
+            overflow: hidden;
+            right: 19px;
+
+        }
+        #banner-btm img{
+            border-radius: 8px;
+            width: 1373px;
+        }
+
+
+    </style>
+    <div id="div-btnn">
+        <ul>
+            <li>
+                <a>
+                    <img src="images/div-btnn1.jpg">
+                </a>
+
+
+            </li>
+            <li>
+                <a>
+                    <img src="images/div-btnn2.jpg">
+
+                </a>
+
+            </li>
+            <li>
+                <a>
+                    <img src="images/div-btnn3.jpg">
+
+                </a>
+
+            </li>
+            <li>
+                <a>
+                    <img src="images/div-btnn4.jpg">
+
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="scroll-slider2 BYekan" style="top: 2255px">
+        <h3 class="scroll-title2 BYekan">
+            خانه و آشپزخانه
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+
+    <div class="scroll-slider2 BYekan" style="top: 3876px">
+        <h3 class="scroll-title2 BYekan">
+             کوه نوردی و کمپینگ
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+    <div id="scroll_btnn">
+        <ul>
+            <li>
+                <a>
+                    <img src="images/scroll-btnn1.jpg">
+
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/scroll-btnn2.jpg">
+
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="scroll-slider2 BYekan" style="top: 2697px">
+        <h3 class="scroll-title2 BYekan">
+            کیف و کوله پشتی
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+
+    <div class="scroll-slider2 BYekan" style="top: 3430px">
+        <h3 class="scroll-title2 BYekan">
+            محصولات پر بازدید اخیر
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+    <div id="banner-btm" >
+        <a>
+            <img src="images/banner-btm.jpg">
+        </a>
+
+    </div>
+    <div class="scroll-slider2 BYekan" style="top: 4513px">
+        <h3 class="scroll-title2 BYekan">
+            منتخب جدیدترین کالاها
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+    <div class="scroll-slider2 BYekan" style="top: 4957px">
+        <h3 class="scroll-title2 BYekan">
+            محصولات پرفروش اخیر
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+    <div class="scroll-slider2 BYekan" style="top: 5404px; height:250px; ">
+        <h3 class="scroll-title2 BYekan">
+            برند های ویژه
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+
+    <div class="scroll-slider2 BYekan" style="top: 5680px">
+        <h3 class="scroll-title2 BYekan">
+            منتخب محصولات تخفیف و حراج
+        </h3>
+        <div class="scroll-slider-content">
+
+            <div class="scroll-slider-main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider21.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+                            </div>
+                            <span class="scroll-price">
+                                ۶۵۰۰۰ تومان
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider22.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی کوتر ممتاز
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۴۹۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider23.jpg">
+                            <div class="scroll-name">
+                                فیله ماهی منجمد
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۲۹۹۰۰ تومان
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider24.jpg">
+                            <div class="scroll-name">
+                                گوشت چرخ کرده
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۹۹۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider25.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۱۳۷۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scroll-slider26.jpg">
+                            <div class="scroll-name">
+                                ماهی سالمون منجمد
+
+
+                            </div>
+                            <span class="scroll-price">
+                                 ۵۳۰۰۰ تومان
+
+                            </span>
+
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!--<div class="scroll-slider-btn-style1 style1-right"></div>
+            <div class="scroll-slider-btn-style1 style1-left"></div>-->
+
+            <div class="scroll-slider-btn-style2 style2-right" id="prev-btn2" onclick="sliderscroll2('right',this);"></div>
+            <div class="scroll-slider-btn-style2 style2-left" id="next-btn2" onclick="sliderscroll2('left',this);"></div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+<style>
+    footer{
+        width: 100%;
+        height:873px;
+        background: #eceff1;
+        position: absolute;
+        top:6400px;
+        border-top: 1px solid #a49e9e1a;
+    }
+    #top-footer{
+        width: 100%;
+        height:60%;
+        margin-top: 13px;
+
+    }
+    #buttom-footer{
+        width: 100%;
+        height: 43%;
+        background: #d7dee0;;
+    }
+    #header-footer{
+        width:1373px;
+        height:155px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        padding-left: 212px;
+    }
+    #header-footer ul li {
+        float: left;
+        margin-right: 124px;
+        
+    }
+    #middle-footer{
+        height: 253px;
+        width: 1373px;
+        border-top: 1px solid #a49e9e1a;
+        border-bottom: 1px solid #a49e9e1a;
+        right: 0;
+        left: 0;
+        margin: auto;
+
+
+    }
+    #middle-footer ul{
+        float: right;
+        margin-right: -23px;
+    }
+    #middle-footer>ul>li{
+        float: left;
+        margin-right: 163px;
+        margin-top: 10px;
+        line-height: 41px;
+        color: #666666;
+        font-weight: lighter;
+
+
+    }
+    #middle-footer>ul>li>ul>li:first-child{
+        color: #4a5f73 !important;
+        font-size: larger;
+    }
+    #email{
+        color: #666666;
+        height:35px;
+        width: 320px;
+        float: left;
+        margin-top: 31px;
+        margin-left: 12px;
+
+
+    }
+    #email-box{
+        border-radius: 8px;
+        border:1px solid #a49e9e1a ;
+        width:330px;
+        height:50px;
+        float: left;
+        color: #888888;
+        line-height: 47px;
+        margin-top: 6px;
+    }
+    #email-box-left{
+        background: #00bfd6;
+        color: #eeeeee;
+        width:18%;
+        height: 100%;
+        float: left;
+        border-radius: 8px 0 0 8px;
+        line-height: 47px;
+        padding-right: 4px;
+    }
+    #social-network p{
+        color: #666666;
+    }
+    #social-network img{
+        border-radius: 8px;
+        margin-top: -15px;
+    }
+    #footer-footer{
+        width:1373px;
+        height:120px;
+        color: #666666;
+        right: 0;
+        left: 0;
+        margin: auto;
+
+    }
+    #footer-footer1{
+        float: right;
+        border-left:1px solid #a49e9e ;
+        margin-left: 78px;
+        margin-right: 102px;
+        margin-top: 20px;
+        width: 357px;
+        font-size: 12pt;
+        height:37%;
+        line-height: 46px;
+        padding-left: 10px;
+
+    }
+    #footer-footer2{
+        float: right;
+        width: 202px;
+        margin-top: 20px;
+        font-size: 12pt;
+        border-left:1px solid #a49e9e ;
+        height:37%;
+        line-height: 46px;
+        padding-left: 2px;
+    }
+    #footer-footer3{
+        float: right;
+        width: 248px;
+        margin-top: 20px;
+        font-size: 12pt;
+        padding-right: 20px;
+        line-height: 46px;
+
+    }
+    #top-bottom-footer{
+        height: 80%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width:1373px;
+        border-bottom: 1px solid #9999994d;
+
+    }
+    #text-bottom-footer h3{
+        color: #666666;
+    }
+    #text-bottom-footer{
+        width: 756px;
+        height: 170px;
+        right: 0;
+        left:0;
+        margin: auto;
+        padding-left: 413px;
+        padding-top: 20px;
+        color: #585252e6;
+        font-size: 11pt;
+    }
+    #img-bottom-footer{
+        float: left;
+    }
+    #email-box input{
+        width:77% ;
+        height: 95%;
+        border-radius: 0 8px 8px 0;
+        border: 0 solid;
+        font-size: 11pt;
+        padding-right: 11px;
+    }
+    #footer-footer ul li{
+        float: left;
+
+        width: 147px;
+        height: 39px;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-top: 24px;
+        margin-left: 10px;
+    }
+    #footer-footer ul{
+        float: left;
+    }
+    #top-bottom-footer ul li{
+        overflow: hidden;
+        right: 0;
+        left: 0;
+        margin: auto;
+        float: left;
+        padding-right: 98px;
+        padding-left: 58px;
+    }
+    #bottom-bottom-footer{
+        width: 1373px;
+        height: 20%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+        color: #5a5353;
+        font-size: 11pt;
+    }
+    }
+
+
+
+</style>
+<footer>
+    <div id="top-footer" class="BYekan fontmd">
+        <div id="header-footer">
+            <ul>
+                <li>
+                <a>
+                    <img src="images/footer1.jpg">
+
+                </a>
+            </li>
+                <li>
+                    <a>
+                        <img src="images/footer2.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/footer3.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/footer4.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/footer5.jpg">
+
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div id="middle-footer">
+            <ul>
+                <li>
+                    <ul>
+                        <li>
+                            <a>
+                                راهنمای خرید از دیجیکالا
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                نحوه ثبت سفارش
+                            </a>
+
+
+                        </li>
+                        <li>
+                            <a>
+                                رویه ارسال سفارش
+                            </a>
+
+
+                        </li>
+                        <li>
+                            <a>
+                                شیوه های پرداخت
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a>
+                                خدمات مشتریان
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                پاسخ به پرسش های متداول
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                رویه های بازگرداندن کالا
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                شرایط استفاده
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                حریم خصوصی
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a>
+                                با دیجی کالا
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                فروش در دیجی کالا
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                همکاری با سازمان ها
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                فرصت های شغلی
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                تماس با دیجی کالا
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                درباره دیجی کالا
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+            <div id="email">
+                از تخفیف ها و جدیدترین های دیجی کالا با خبر شوید:
+            </div>
+            <div id="email-box">
+                <input placeholder="آدرس ایمیل خود را وارد کنید">
+
+                <div id="email-box-left">
+                    ارسال
+
+                </div>
+                <div id="social-network">
+                    <p>
+                        دیجی کالا را در شبکه های اجتماعی دنبال کنید:
+                    </p>
+                    <a><img src="images/instagram.jpg"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer-footer">
+            <div id="footer-footer1">
+                هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم
+            </div>
+            <div id="footer-footer2">
+                شماره تماس : ۰۹۱۶۶۴۶۳۳۵۹
+
+            </div>
+            <div id="footer-footer3">
+                آدرس ایمیل :fateme.ragh@gmail.com
+            </div>
+            <ul>
+                <li>
+                    <a>
+                        <img src="images/bazar.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/sibapp.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="buttom-footer">
+        <div id="top-bottom-footer">
+            <div id="text-bottom-footer">
+                <h3>
+                    فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین
+                </h3>
+                دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل کلیدی، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود. به محض ورود به دیجی‌کالا با یک سایت پر از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد.
+            </div>
+            <ul>
+                <li>
+                    <a>
+                        <img src="images/brands1.jpg">
+
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img src="images/brands2.jpg">
+
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img src="images/brands3.jpg">
+
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img src="images/brands4.jpg">
+                    </a>
+
+                </li>
+            </ul>
+
+
+        </div>
+        <div id="bottom-bottom-footer">
+            استفاده از مطالب فروشگاه اینترنتی دیجی‌کالا فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) می‌باشد.
+        </div>
+    </div>
+
+</footer>
+
+
+
+<script>
+    ////////////////////////////////////////////*scroll slider1*////
+
+
+    function sliderscroll(direction,tag){
+        var div_tag=$(tag);
+        var scrollsliderTag=div_tag.parents('.scroll-slider');
+        var scrollsliderul=scrollsliderTag.find(".scroll-slider-main ul");
+        var scrollsliderItem=scrollsliderul.find("li");
+        var scrollnums=scrollsliderItem.length;
+        var slidenums=Math.ceil(scrollnums/4);
+        var maxNegetiveMargin=-(slidenums-1)*1020
+        scrollsliderul.css("width",scrollnums*255);
+        var marginLeftOld=scrollsliderul.css('margin-left');
+        marginLeftOld=parseFloat(marginLeftOld);
+
+
+
+        if (direction == "left"){
+            var marginLeftNew=marginLeftOld-255;
+
+        }
+        if (direction == "right"){
+            var marginLeftNew=marginLeftOld+255;
+
+        }
+        if(marginLeftNew<maxNegetiveMargin){
+            marginLeftNew=0;
+            $("#prev-btn").css("background-color","blue");
+
+        }
+        if(marginLeftNew>0){
+            marginLeftNew=maxNegetiveMargin;
+            $('#next-btn').css("background-color","blue");
+        }
+
+
+        scrollsliderul.animate({"marginLeft":marginLeftNew},200);
+
+    }
+
+
+    $('#next-btn').click(function(){
+        sliderscroll("left");
+        }
+    );
+
+    $('#prev-btn').click(function(){
+            sliderscroll("right");
+        }
+    );
+
+
+/*scroll slider2*//////////////////////////////
+    function sliderscroll2(direction,tag){
+        var div_tag2=$(tag);
+        var scrollsliderTag2=div_tag2.parents('.scroll-slider2');
+        var scrollsliderul2=scrollsliderTag2.find(".scroll-slider-main ul");
+        var scrollsliderItem2=scrollsliderul2.find("li");
+        var scrollnums2=scrollsliderItem2.length;
+        var slidenums2=Math.ceil(scrollnums2/4);
+        var maxNegetiveMargin2=-(slidenums2-1)*1020
+        scrollsliderul2.css("width",scrollnums2*255);
+        var marginLeftOld2=scrollsliderul2.css('margin-left');
+        marginLeftOld2=parseFloat(marginLeftOld2);
+
+
+
+        if (direction == "left"){
+            var marginLeftNew2=marginLeftOld2-255;
+
+        }
+        if (direction == "right"){
+            var marginLeftNew2=marginLeftOld2+255;
+
+        }
+        if(marginLeftNew2<maxNegetiveMargin2){
+            marginLeftNew2=0;
+            $("#prev-btn2").css("background-color","blue");
+
+        }
+        if(marginLeftNew2>0){
+            marginLeftNew2=maxNegetiveMargin2;
+            $('#next-btn2').css("background-color","blue");
+        }
+
+
+        scrollsliderul2.animate({"marginLeft":marginLeftNew2},200);
+
+    }
+
+
+    $('#next-btn2').click(function(){
+            sliderscroll2("left");
+        }
+    );
+
+    $('#prev-btn2').click(function(){
+            sliderscroll2("right");
+        }
+    );
+
+
+
+    /*timer clock*/
+    $(document).ready(function () {
+            $('.clock').flipTimer(
+                {
+                    direction: 'down', date: 'february 25, 2019 22:09:00', callback: function () {
+                        $(".banner-finished").fadeIn(200)
+                    }
+                }
+            );
+        }
+    );
+    ////////*slider1*/////
+    var sliderTag = $("#slider");
+    var sliderItems = sliderTag.find(".item");
+    var nextslide = 1;
+    var numslides = sliderItems.length;
+    var slidernavigator = sliderTag.find("#slider-navigator ul li");
+    var timeOut = 5000;
+
+    function slider() {
+        if (nextslide > numslides) {
+            nextslide = 1;
+        }
+        if (nextslide < 1) {
+            nextslide = numslides;
+        }
+
+        sliderItems.hide();
+        sliderItems.eq(nextslide - 1).fadeIn(100);
+        slidernavigator.removeClass('active');
+        slidernavigator.eq(nextslide - 1).addClass('active');
+        nextslide++;
+
+    }
+
+    slider();
+    var sliderInterval = setInterval(slider, timeOut);
+
+    sliderTag.mouseleave(function () {
+            clearInterval(sliderInterval);
+            sliderInterval = setInterval(slider, timeOut);
+        }
+    );
+
+
+    function goTonext() {
+        slider();
+    }
+
+    $(" #slider #next-icon").click(function () {
+        clearInterval(sliderInterval);
+        goTonext()
+
+    });
+
+    function goToprev() {
+        nextslide = nextslide - 2;
+        slider();
+    }
+
+    $(" #slider #prev-icon").click(function () {
+        clearInterval(sliderInterval);
+        goToprev();
+
+    });
+
+    function goToslide(index) {
+        nextslide = index;
+
+        slider();
+
+    }
+
+    $("#slider #slider-navigator li").click(function () {
+        var index = $(this).index();
+        clearInterval(sliderInterval);
+        goToslide(index + 1);
+
+    });
+
+
+
+
+    ////////*slider2*/
+    var sliderTag2 = $(".slider2");
+    var sliderItems2 = sliderTag2.find(".item2");
+    var nextslide2 = 1;
+    var numslides2 = sliderItems2.length;
+    var slidernavigator2 = sliderTag2.find("#discount-bar ul li");
+    var timeOut2 = 5000;
+
+    function slider2() {
+        if (nextslide2 > numslides2) {
+            nextslide2 = 1;
+        }
+        if (nextslide2 < 1) {
+            nextslide2 = numslides2;
+        }
+
+        sliderItems2.hide();
+        sliderItems2.eq(nextslide2 - 1).fadeIn(100);
+        slidernavigator2.removeClass('active2');
+        slidernavigator2.eq(nextslide2 - 1).addClass('active2');
+        nextslide2++;
+
+    }
+
+    slider2();
+    var sliderInterval2 = setInterval(slider2, timeOut2);
+
+    sliderTag2.mouseleave(function () {
+            clearInterval(sliderInterval2);
+            sliderInterval2 = setInterval(slider2, timeOut2);
+        }
+    );
+
+
+    function goToslide2(index) {
+        nextslide2 = index + 1;
+
+        slider2();
+
+    }
+
+    $("#discount-bar ul li").click(function () {
+        var index = $(this).index();
+        clearInterval(sliderInterval2);
+        goToslide2(index);
+
+    });
+
+    //////*slider2*/
+
+
+
+
+
+
+
+    /* menu*//////
+    var timer = {};
+
+    $('#menu-top li').hover(
+        function () {
+            var tag = $(this);
+            var timerAttr = $(">ul>li", tag).attr("data-timer");
+
+
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout
+            (
+                function () {
+
+                    $(">ul", tag).fadeIn(0);
+                    $(">.submenu3", tag).fadeIn(0);
+                    tag.addClass('active-menu');
+
+                }, 500);
+
+
+        }
+        , function () {
+
+            var tag = $(this);
+            var timerAttr = tag.attr("data-timer");
+
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout(
+                function () {
+
+                    $(">ul", tag).fadeOut(0);
+                    $(">.submenu3", tag).fadeOut(0);
+                    tag.removeClass('active-menu');
+
+                }
+                , 600);
+
+
+        }
+    );
+
+
+
+
+    /////////////////animation,botton*////
+
+
+    $("#discount-bottom").hover(function () {
+
+        $("#discount-bottom-shadow").css(
+            "width", "450px"
+        )
+
+
+    }, function () {
+
+        $("#discount-bottom-shadow").css(
+            "width", "95px"
+        )
+
+    })
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html> 

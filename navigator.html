@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<style>
+    #slider {
+    width: 1147px;
+    height: 332px;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+    position: relative;
+}
+
+#slider a {
+    display: none;
+
+}
+
+#slider img {
+    width: 1147px;
+    height: 332px;
+
+}
+    #next-icon {
+        width: 26px;
+        height: 29px;
+        display: block;
+        position: absolute;
+        top: 167px;
+        right: 10px;
+        background: url("images/next.png");
+        cursor: pointer;
+        z-index: 2;
+    }
+    #prev-icon{
+        width: 26px;
+        height: 29px;
+        display: block;
+        position: absolute;
+        top: 167px;
+        left: 10px;
+        background: url("images/back.png");
+        cursor: pointer;
+        z-index: 2;
+    }
+</style>
+
+<div id="slider">
+
+    <span id="next-icon"></span>
+    <span id="prev-icon"></span>
+
+    <a class="item">
+        <img src=" images/slider1.png">
+    </a>
+    <a class="item">
+        <img src=" images/slider2.png">
+    </a>
+    <a class="item">
+        <img src="images/slider3.png">
+
+    </a>
+    <a class="item">
+        <img src="images/slider4.png">
+    </a>
+
+</div>
+
+</body>
+</html>
