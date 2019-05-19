@@ -92,3 +92,4 @@ the [guidelines](.github/CONTRIBUTING.md):
 The code is available under the [MIT license](LICENSE.txt).
 # digikala
 # digikala-copy
+# digikala-copy
